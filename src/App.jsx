@@ -15,7 +15,7 @@ import OatMeal from './components/OatMeal'
 import Salads from './components/Salads'
 import Millets from './components/Millets'
 import Footer from './components/Footer'
-import Admin from './components/admin'
+import Admin from './components/Admin'
 import AddProduct from './components/AddProduct'
 import EditProduct from './components/EditProduct'
 
