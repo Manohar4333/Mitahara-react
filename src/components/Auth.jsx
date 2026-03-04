@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Auth.css';
 
@@ -50,6 +50,7 @@ const Auth = ({ onLogin }) => {
     setForm({ username: '', email: '', password: '' });
     setError('');
     setIsLogin(true);
+    window.location.href = '/'; // Redirect to Home page after logout
   };
 
   if (loggedInUser) {

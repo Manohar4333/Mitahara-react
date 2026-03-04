@@ -1,0 +1,56 @@
+*
+{
+    font-family:"Roboto";
+}
+.aboutus-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #2d2d2d;
+}
+
+.aboutus-hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.aboutus-hero h1 {
+  font-size: 2.5rem;
+  color: #4caf50;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.aboutus-hero .brand {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.aboutus-hero p {
+  font-size: 1.15rem;
+  color: #555;
+}
+
+.aboutus-content h2 {
+  color: #4caf50;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.aboutus-content p {
+  font-size: 1.08rem;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.aboutus-content ul {
+  list-style: disc inside;
+  margin-bottom: 18px;
+  padding-left: 18px;
+  color: #333;
+}

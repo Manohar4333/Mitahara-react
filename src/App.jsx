@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react'
-import Navbar from './components/Navbar'
+import Navbar from './components/layout/Navbar'
 import './App.css'
 import Auth from './components/Auth';
-import Cart from './components/Cart';
+import Cart from './components/cart/Cart';
 import { Route, Routes } from 'react-router-dom'
-import FoodBowl from './components/FoodBowl'
-import Error from './components/Error'
+import FoodBowl from './components/food/FoodBowl'
+import Error from './components/pages/Error'
 import Contact from './components/Contact'
-import Blogs from './components/Blogs'
-import AboutUs from './components/AboutUs'
-import Juices from './components/Juices'
-import Home from './components/Home'
-import OatMeal from './components/OatMeal'
-import Salads from './components/Salads'
-import Millets from './components/Millets'
-import Footer from './components/Footer'
-import Admin from './components/Admin'
-import AddProduct from './components/AddProduct'
-import EditProduct from './components/EditProduct'
+import Blogs from './components/blog/Blogs'
+import AboutUs from './components/pages/AboutUs'
+import Juices from './components/juice/Juices'
+import Home from './components/pages/Home'
+import OatMeal from './components/oatmeal/OatMeal'
+import Salads from './components/salad/Salads'
+import Millets from './components/millet/Millets'
+import Footer from './components/layout/Footer'
+import Admin from './components/admin/Admin'
+import AddProduct from './components/admin/AddProduct'
+import EditProduct from './components/admin/EditProduct'
 
 function App() {
   const [user, setUser] = useState(null);

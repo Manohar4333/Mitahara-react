@@ -1,8 +1,7 @@
-import React from 'react'
-import { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import { getProducts } from "./services/getProducts";
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { getProducts } from '../services/getProducts';
 import AdminSideMenu from './AdminSideMenu';
 import './Admin.css';
 
@@ -27,7 +26,7 @@ const AllProducts = () => {
       return;
     }
     // Navigate to edit page, pass product in location state
-    navigate('/admin/', { state: { product } });
+    navigate('/admin/edit', { state: { product } });
   }
 
   const handleRemove = (id) => {
@@ -89,5 +88,4 @@ const AllProducts = () => {
   )
   
 }
-
-export default AllProducts
+export default AllProducts;

@@ -27,11 +27,52 @@ form .form-group{
     padding: 4px;
 }
 form .form-input{
+    width: 100%;
+    height: 30px;
     margin: 0 20px;
-    border: 0.5px solid black;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    /* background-color: transparent; */
-    /* color: white; */
+    padding: 5px;
+    box-sizing: border-box;
+
+}
+
+form select{
+    margin: 0 20px;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0.5px solid black ;
+    padding: 3px;
+}
+
+
+input[type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+}
+
+label{
+    margin: 0 20px;
+    font-size: 1.1rem;
+    color: #333;
 }
 
 .form-button{

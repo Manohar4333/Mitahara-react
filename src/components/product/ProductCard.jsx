@@ -42,16 +42,15 @@ const ProductCard = ({product}) => {
                         min="1"
                         value={quantity}
                         onChange={e => setQuantity(Number(e.target.value))}
-                        style={{ width: '60px', marginLeft: '8px' }}
                     />
+                    <button className='btn btn-warning' onClick={handleAddToCart} disabled={adding}>
+                        {adding ? 'Adding...' : '🛒 Add to Cart '}
+                    </button>
                 </div>
-                <button className="add-cart-btn" onClick={handleAddToCart} disabled={adding}>
-                    {adding ? 'Adding...' : 'Add to Cart'}
-                </button>
-                {msg && <div className="add-cart-msg">{msg}</div>}
+                {msg && <div className="cart-msg">{msg}</div>}
             </div>
         </div>
     );
-}
+};
 
 export default ProductCard;

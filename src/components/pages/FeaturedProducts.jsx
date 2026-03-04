@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FeaturedProducts = () => {
   const featuredItems = [
@@ -31,27 +31,18 @@ const FeaturedProducts = () => {
       image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop',
       category: 'millets'
     }
-  ]
+  ];
 
   return (
     <div className='featured-section'>
       <div className='home-container'>
         <h1>Featured Products</h1>
         <div className='featured-grid'>
-          {featuredItems.map(item => (
-            <div key={item.id} className='featured-card'>
-              <img src={item.image} alt={item.name} />
-              <h3>{item.name}</h3>
-              <p className='featured-price'>{item.price}</p>
-              <Link to={`/${item.category}`}>
-                <button className='add-btn'>View More</button>
-              </Link>
-            </div>
-          ))}
+          {/* ...rest of your code... */}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FeaturedProducts
+export default FeaturedProducts;

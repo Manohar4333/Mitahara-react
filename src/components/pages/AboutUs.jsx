@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutUs.css';
+import './AboutUs.css'; // Now in the same folder
 
 const AboutUs = () => {
   return (

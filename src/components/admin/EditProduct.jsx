@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-
 const BASE_URL = 'http://localhost:4300/update'
 
 const EditProduct = () => {
@@ -102,5 +101,6 @@ const EditProduct = () => {
     </div>
   )
 }
+
 
 export default EditProduct
