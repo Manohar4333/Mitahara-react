@@ -1,5 +1,4 @@
-
-# Mitahara React E-Commerce App
+# Mitahara  E-Commerce App
 
 Mitahara is a modern, responsive e-commerce web application built with React and Vite. It features user authentication, product browsing, cart management, and admin product controls.
 
@@ -62,29 +61,79 @@ mitahara/
 ├── public/
 ├── src/
 │   ├── assets/
+│   │   ├── Banner.png
+│   │   ├── fruit_bowl.jpg
+│   │   ├── logo.png
+│   │   ├── millets.jfif
+│   │   ├── millets.png
+│   │   ├── oatmeal.jpg
+│   │   ├── react.svg
+│   │   └── salad.jpg
 │   ├── components/
-│   │   ├── AboutUs.jsx
-│   │   ├── AddProduct.jsx
-│   │   ├── Admin.jsx
-│   │   ├── Cart.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── ProductCard.jsx
-│   │   └── ...
-│   ├── services/
-│   │   ├── cartService.js
-│   │   └── ...
+│   │   ├── AboutUs.css
+│   │   ├── Auth.css
+│   │   ├── Auth.jsx
+│   │   ├── Navbar.css
+│   │   ├── admin/
+│   │   │   ├── AddProduct.css
+│   │   │   ├── AddProduct.jsx
+│   │   │   ├── Admin.css
+│   │   │   ├── Admin.jsx
+│   │   │   ├── AdminSideMenu.jsx
+│   │   │   ├── AllProducts.jsx
+│   │   │   └── EditProduct.jsx
+│   │   ├── blog/
+│   │   │   ├── Blogs.css
+│   │   │   └── Blogs.jsx
+│   │   ├── cart/
+│   │   │   ├── Cart.css
+│   │   │   └── Cart.jsx
+│   │   ├── category/
+│   │   │   └── CategoryProducts.jsx
+│   │   ├── common/           # (empty)
+│   │   ├── contact/          # (empty)
+│   │   ├── features/         # (empty)
+│   │   ├── food/
+│   │   │   └── FoodBowl.jsx
+│   │   ├── juice/
+│   │   │   └── Juices.jsx
+│   │   ├── layout/
+│   │   │   ├── Footer.jsx
+│   │   │   └── Navbar.jsx
+│   │   ├── millet/
+│   │   │   └── Millets.jsx
+│   │   ├── oatmeal/
+│   │   │   └── OatMeal.jsx
+│   │   ├── pages/
+│   │   │   ├── AboutUs.css
+│   │   │   ├── AboutUs.jsx
+│   │   │   ├── Error.jsx
+│   │   │   ├── FeaturedProducts.jsx
+│   │   │   ├── Home.css
+│   │   │   └── Home.jsx
+│   │   ├── product/
+│   │   │   └── ProductCard.jsx
+│   │   ├── salad/
+│   │   │   └── Salads.jsx
+│   │   ├── services/
+│   │   │   ├── cartService.js
+│   │   │   ├── getProducts.js
+│   │   │   └── productService.js
+│   │   └── shared/           # (empty)
+│   ├── App.css
 │   ├── App.jsx
-│   └── main.jsx
+│   ├── context/              # (if present)
+│   ├── hooks/                # (if present)
+│   ├── index.css
+│   ├── main.jsx
+│   ├── styles/               # (if present)
+│   └── utils/                # (if present)
 ├── package.json
 ├── vite.config.js
 └── README.md
 ```
 
-## Customization
 
-- Update logo and branding in `src/assets/` and `Navbar.jsx`
-- Modify color scheme in `Navbar.css` and `App.css`
-- Extend product and cart features as needed
 
 ## License
 
