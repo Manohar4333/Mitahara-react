@@ -29,7 +29,6 @@ function Navbar() {
 			<div className='navbar-right'>
 				<Link to='/cart' className='cart-icon'>
 					<i className='fas fa-shopping-cart'></i>
-					<span className='cart-count'>0</span>
 				</Link>
 				<div className='login-icon-box'>
 					<span className='login-icon' onClick={handleIconClick} title={loggedIn ? 'Logged In' : 'Login'}>
