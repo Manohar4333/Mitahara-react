@@ -42,6 +42,7 @@ function App() {
         <Route path='/salads' element = {<Salads/>}/>
         <Route path='/millets' element = {<Millets/>}></Route>
         <Route path='/admin' element = {<Admin/>} > </Route>
+        <Route path='/admin/login' element = {<Auth onLogin={setUser}/>} />
         <Route path='/admin/add-product' element = {<AddProduct/>}/>
         <Route path='/admin/edit' element= {<EditProduct/>}/>
         <Route path='/cart' element={user ? <Cart/> : <Auth onLogin={setUser}/>}/>

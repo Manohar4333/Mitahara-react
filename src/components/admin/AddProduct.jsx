@@ -5,6 +5,11 @@ import './Admin.css';
 import './AddProduct.css';
 
 const AddProduct = () => {
+        // Restrict access to admin only
+        const isAdmin = localStorage.getItem('isAdmin') === 'true';
+        if (!isAdmin) {
+            return <div style={{textAlign:'center',marginTop:'40px',color:'red',fontWeight:'bold'}}>Admin access required to add products.</div>;
+        }
     const [form, setForm] = useState({
         id: '',
         productName: '',

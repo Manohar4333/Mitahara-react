@@ -11,17 +11,18 @@
 }
 
  .nav{
-           background-color:#CAE09F;
-           font-size: x-large;
-           font-optical-sizing: auto;
-           font-weight: 700;
-           font-style: normal;
-           display: flex;
-           position: sticky;
-           top:0px;
-           right:0px;
-           left:0px;
+  background-color:#CAE09F;
+  font-size: x-large;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  display: flex;
+  position: sticky;
+  top:0px;
+  right:0px;
+  left:0px;
 .nav {
+    position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,6 +44,50 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 200;
+}
+.bar {
+  width: 28px;
+  height: 4px;
+  background: #333;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .hamburger-menu {
+    display: flex;
+  }
+  .nav ul.nav {
+    display: none;
+  }
+  .nav ul.nav.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    background: #CAE09F;
+    gap: 18px;
+    padding: 16px 0;
+    z-index: 150;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+}
 }
 .nav-item {
   color: #333;

@@ -20,7 +20,12 @@ function Navbar() {
 	return (
 		<nav className='nav'>
 			<img src={logo} style={{width:'250px'}} className='logo-img' alt='' />
-			<ul className='nav'>
+			<div className='hamburger-menu' onClick={handleIconClick}>
+				<span className='bar'></span>
+				<span className='bar'></span>
+				<span className='bar'></span>
+			</div>
+			<ul className={`nav nav-links${showMenu ? ' show' : ''}`}>
 				<li className='nav-item'><Link className='nav-item' to=''>Home</Link></li>
 				<li className='nav-item'><Link className='nav-item' to='/blogs'>Blogs</Link></li>
 				<li className='nav-item'><Link className='nav-item' to='/about-us'>About Us</Link></li>

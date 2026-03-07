@@ -12,7 +12,7 @@ const Home = () => {
     <div>
       <div className="banner">
         <hr/>
-        <img src={Banner} alt=""/>
+        <img className='banner-image' src={Banner} alt=""/>
         <hr/>
       </div>
       <div className='home-container'>

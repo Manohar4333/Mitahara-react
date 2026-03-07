@@ -8,12 +8,15 @@ const Auth = ({ onLogin }) => {
   const [form, setForm] = useState({ username: '', email: '', password: '' });
   const [error, setError] = useState('');
   const [loggedInUser, setLoggedInUser] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
     // Check localStorage for user info (simulate user session)
     const user = localStorage.getItem('user');
+    const adminFlag = localStorage.getItem('isAdmin');
     if (user) {
       setLoggedInUser(JSON.parse(user));
+      setIsAdmin(adminFlag === 'true');
     }
   }, []);
 
@@ -24,6 +27,16 @@ const Auth = ({ onLogin }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    // Static admin login
+    if (isLogin && form.username === 'admin' && form.password === '4333') {
+      const adminUser = { username: 'admin' };
+      localStorage.setItem('user', JSON.stringify(adminUser));
+      localStorage.setItem('isAdmin', 'true');
+      setLoggedInUser(adminUser);
+      setIsAdmin(true);
+      onLogin && onLogin(adminUser);
+      return;
+    }
     try {
       if (isLogin) {
         const res = await axios.post('http://localhost:4300/auth/login', {
@@ -32,7 +45,9 @@ const Auth = ({ onLogin }) => {
         });
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('user', JSON.stringify(res.data.user));
+        localStorage.setItem('isAdmin', 'false');
         setLoggedInUser(res.data.user);
+        setIsAdmin(false);
         onLogin(res.data.user);
       } else {
         await axios.post('/auth/register', form);
@@ -46,7 +61,9 @@ const Auth = ({ onLogin }) => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    localStorage.removeItem('isAdmin');
     setLoggedInUser(null);
+    setIsAdmin(false);
     setForm({ username: '', email: '', password: '' });
     setError('');
     setIsLogin(true);
@@ -61,6 +78,7 @@ const Auth = ({ onLogin }) => {
           <div className="user-info">
             <span className="user-icon">👤</span>
             <span className="user-name">{loggedInUser.username || loggedInUser.email} has logged in</span>
+            {isAdmin && <div style={{ color: 'green', fontWeight: 'bold', marginTop: '8px' }}>Admin Access Granted</div>}
           </div>
           <button className="logout-btn" onClick={handleLogout}>
             Logout
@@ -75,32 +93,32 @@ const Auth = ({ onLogin }) => {
       <div className="auth-card">
         <h2 className="auth-title">{isLogin ? 'Login' : 'Register'}</h2>
         <form onSubmit={handleSubmit} className="auth-form">
+          <div className="input-group">
+            <label htmlFor="username">Username</label>
+            <input
+              id="username"
+              type="text"
+              name="username"
+              placeholder="Enter your username"
+              value={form.username}
+              onChange={handleChange}
+              required
+            />
+          </div>
           {!isLogin && (
             <div className="input-group">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="email">Email</label>
               <input
-                id="username"
-                type="text"
-                name="username"
-                placeholder="Enter your username"
-                value={form.username}
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                value={form.email}
                 onChange={handleChange}
                 required
               />
             </div>
           )}
-          <div className="input-group">
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
           <div className="input-group">
             <label htmlFor="password">Password</label>
             <input
@@ -120,7 +138,6 @@ const Auth = ({ onLogin }) => {
         </button>
         {error && <div className="auth-error">{error}</div>}
       </div>
-
     </div>
   );
 }

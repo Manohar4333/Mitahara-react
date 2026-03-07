@@ -4,6 +4,11 @@ import axios from 'axios'
 const BASE_URL = 'http://localhost:4300/update'
 
 const EditProduct = () => {
+    // Restrict access to admin only
+    const isAdmin = localStorage.getItem('isAdmin') === 'true';
+    if (!isAdmin) {
+      return <div style={{textAlign:'center',marginTop:'40px',color:'red',fontWeight:'bold'}}>Admin access required to edit products.</div>;
+    }
   const location = useLocation()
   const navigate = useNavigate()
   const product = location.state && location.state.product
