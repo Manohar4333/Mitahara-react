@@ -16,13 +16,19 @@ h1{
 }
 
 
-.container-grid{
+
+@media (min-width: 1200px) {
+    .container-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+    margin: auto;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 24px;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
 }
+    
+} 
+
 
 
 .grid-item img{
