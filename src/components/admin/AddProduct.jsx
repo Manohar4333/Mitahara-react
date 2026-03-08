@@ -57,7 +57,7 @@ const AddProduct = () => {
                 <label className='form-label' htmlFor="productName">Product Name</label>
                 <input className='form-input' type="text" id="productName" name="productName" value={form.productName} onChange={handleChange} required placeholder="Enter product name" />
             </div>
-              <div className='form-group'>
+            <div className='form-group'>
                     <label className='form-label'>Category</label>
                     <select name="category" id="category" value={form.category} onChange={handleChange}>
                         <option value="">-- Select category --</option>
