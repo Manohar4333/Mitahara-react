@@ -18,19 +18,26 @@ function Navbar() {
 	};
 
 	return (
-		<nav className='nav'>
-			<img src={logo} style={{width:'250px'}} className='logo-img' alt='' />
-			<div className='hamburger-menu' onClick={handleIconClick}>
-				<span className='bar'></span>
-				<span className='bar'></span>
-				<span className='bar'></span>
+		<nav className='navbar navbar-expand-lg navbar-light bg-light'>
+			<a className='navbar-brand'><img src={logo} style={{width:'150px'}} alt='' /></a>
+			
+			<div className="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul className="navbar-nav mr-auto">
+					<li className="nav-item">
+						<Link className="nav-link" to='/'>Home</Link>
+					</li>
+					<li className="nav-item">
+						<Link className="nav-link" to='/blogs'>Blogs</Link>
+					</li>
+					<li className="nav-item">
+						<Link className="nav-link" to='/about-us'>About Us</Link>
+					</li>
+					<li className="nav-item">
+						<Link className="nav-link" to='/contact'>Contact</Link>
+					</li>
+				</ul>
 			</div>
-			<ul className={`nav nav-links${showMenu ? ' show' : ''}`}>
-				<li className='nav-item'><Link className='nav-item' to=''>Home</Link></li>
-				<li className='nav-item'><Link className='nav-item' to='/blogs'>Blogs</Link></li>
-				<li className='nav-item'><Link className='nav-item' to='/about-us'>About Us</Link></li>
-				<li className='nav-item'><Link className='nav-item' to='/contact'>Contact</Link></li>
-			</ul>
+			
 			<div className='navbar-right'>
 				<Link to='/cart' className='cart-icon'>
 					<i className='fas fa-shopping-cart'></i>
