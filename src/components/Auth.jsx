@@ -50,7 +50,7 @@ const Auth = ({ onLogin }) => {
         setIsAdmin(false);
         onLogin(res.data.user);
       } else {
-        await axios.post('/auth/register', form);
+        await axios.post('http://localhost:4300/auth/register', form);
         setIsLogin(true);
       }
     } catch (err) {

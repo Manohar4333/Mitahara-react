@@ -18,6 +18,8 @@ import Footer from './components/layout/Footer'
 import Admin from './components/admin/Admin'
 import AddProduct from './components/admin/AddProduct'
 import EditProduct from './components/admin/EditProduct'
+import Rotis from './components/rotis/Rotis';
+import MilletBreakfast from './components/milletBreakfast/MilletBreakfast';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -33,7 +35,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/food-bowls' element={<FoodBowl/>}></Route>
+        <Route path='/rotis' element={<Rotis/>}></Route>
+        <Route path='/millet-breakfast' element={<MilletBreakfast/>}></Route>
         <Route path='/blogs' element={<Blogs/>} ></Route>
         <Route path='/oat-meal' element={<OatMeal/>} ></Route>
         <Route path='/about-us' element={<AboutUs/>}></Route>

@@ -18,10 +18,16 @@ const Home = () => {
       <div className='home-container'>
         <h1>Categories</h1>
         <div className='container-grid'>
-          <Link className='cat-item' to='/food-bowls'>
+          <Link className='cat-item' to='/rotis'>
             <div className="grid-item">
               <img src={FruitBowl} alt="" />
-              <h3>Fruit Bowls</h3>
+              <h3>Rotis</h3>
+            </div>
+          </Link>
+          <Link className='cat-item' to='/millet-breakfast'>
+            <div className="grid-item">
+              <img src={Millets} alt="" />
+              <h3>Millet Breakfast</h3>
             </div>
           </Link>
           <Link className='cat-item'  to ='/oat-meal'>

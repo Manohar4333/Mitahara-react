@@ -62,7 +62,8 @@ const AddProduct = () => {
                     <select name="category" id="category" value={form.category} onChange={handleChange}>
                         <option value="">-- Select category --</option>
                         <option value="Millets">Millets</option>
-                        <option value="fruit-bowls">food-bowls</option>
+                        <option value="millet-breakfast">Millet Breakfast</option>
+                        <option value="rotis">Rotis</option>
                         <option value="Salads">Salads</option>
                         <option value="oatmeal">OatMeal</option>
                     </select>

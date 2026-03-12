@@ -20,6 +20,7 @@ function Navbar() {
 	return (
 		<nav className='navbar navbar-expand-lg navbar-light bg-light'>
 			<a className='navbar-brand'><img src={logo} style={{width:'150px'}} alt='' /></a>
+			<button className="navbar-toggler"></button>
 			
 			<div className="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul className="navbar-nav mr-auto">
@@ -40,7 +41,7 @@ function Navbar() {
 			
 			<div className='navbar-right'>
 				<Link to='/cart' className='cart-icon'>
-					<i className='fas fa-shopping-cart'></i>
+					<i class="fa-solid fa-cart-shopping" style={{color:"rgb(0, 0, 0)"}}></i>
 				</Link>
 				<div className='login-icon-box'>
 					<span className='login-icon' onClick={handleIconClick} title={loggedIn ? 'Logged In' : 'Login'}>
