@@ -16,7 +16,10 @@ const Home = () => {
         <hr/>
       </div>
       <div className='home-container'>
-        <h1>Categories</h1>
+        <h1>The Mitahara Menu</h1>
+        <h4>Every dish is a blend of Taste and ancient wisdom, prepared fresh with minimal processing. </h4>
+        <h5></h5>
+        <h6></h6>
         <div className='container-grid'>
           <Link className='cat-item' to='/rotis'>
             <div className="grid-item">

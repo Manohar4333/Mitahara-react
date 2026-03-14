@@ -41,7 +41,7 @@ function Navbar() {
 			
 			<div className='navbar-right'>
 				<Link to='/cart' className='cart-icon'>
-					<i class="fa-solid fa-cart-shopping" style={{color:"rgb(0, 0, 0)"}}></i>
+					<i className="fa-solid fa-cart-shopping" style={{color:"rgb(0, 0, 0)"}}></i>
 				</Link>
 				<div className='login-icon-box'>
 					<span className='login-icon' onClick={handleIconClick} title={loggedIn ? 'Logged In' : 'Login'}>

@@ -36,7 +36,7 @@ const AddProduct = () => {
         };
 
         try {
-            const res = await axios.post('http://localhost:4300/add', payload);
+            const res = await axios.post('https://mitahara-backend.vercel.app//add', payload);
             console.log('Add product response:', res.data);
             alert('Product added successfully');
             setForm({ id: '', productName: '', category: '', price: '', description: '', imageURL: '' });
