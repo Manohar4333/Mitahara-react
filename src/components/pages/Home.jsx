@@ -4,6 +4,7 @@ import FruitBowl from '../../assets/fruit_bowl.jpg';
 import OatMeal from '../../assets/oatmeal.jpg';
 import Millets from '../../assets/millets.png';
 import Salads from "../../assets/salad.jpg";
+import Curries from '../../assets/curries.jpg';
 import './Home.css';
 import { Link } from 'react-router-dom';
 
@@ -39,13 +40,19 @@ const Home = () => {
               <h3>Oat Meal</h3>
             </div>
           </Link>
-          <Link className='cat-item'  to='/salads'>
+          <Link className='cat-item'  to='/curries'>
+            <div className="grid-item">
+              <img src={Curries} alt="" />
+              <h3>Curries</h3>
+            </div>
+          </Link>
+          {/* <Link className='cat-item'  to='/salads'>
             <div className="grid-item">
                   <img src={Salads
                   } alt="" />
               <h3>Salads</h3>
             </div>
-          </Link>
+          </Link> */}
           <Link className='cat-item'  to='/millets'>
             <div className="grid-item">
               <img src={Millets} alt="" />

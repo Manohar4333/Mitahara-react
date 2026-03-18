@@ -20,6 +20,7 @@ import AddProduct from './components/admin/AddProduct'
 import EditProduct from './components/admin/EditProduct'
 import Rotis from './components/rotis/Rotis';
 import MilletBreakfast from './components/milletBreakfast/MilletBreakfast';
+import Curries from './components/curries/Curries';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -42,6 +43,7 @@ function App() {
         <Route path='/about-us' element={<AboutUs/>}></Route>
         <Route path='/contact' element={<Contact/>} ></Route>
         <Route path='/juices' element = {<Juices/>}/>
+        <Route path='/curries' element = {<Curries/>}/>
         <Route path='/salads' element = {<Salads/>}/>
         <Route path='/millets' element = {<Millets/>}></Route>
         <Route path='/admin' element = {<Admin/>} > </Route>
