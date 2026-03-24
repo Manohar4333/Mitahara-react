@@ -61,7 +61,26 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="why-choose">
+
+      <div className="container"> 
+         <div className="row">
+        <div className="col-4">
+          <h2>Measured Food</h2>
+          <img src="" alt="" />
+        </div>
+        <div className="col-4">
+          <h2>Ancient Roots</h2>
+          <img src="" alt="" />
+        </div>
+        <div className="col-4">
+          <h2>Modern Health</h2>
+          <img src="" alt="" />
+        </div>
+      </div>
+
+      </div>
+     
+      {/* <div className="why-choose">
         <h1>Why Choose Us</h1>
         <div className='container'>
           <div className="row">
@@ -85,7 +104,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
